@@ -1,0 +1,50 @@
+@import "/src/shared/style/layout";
+@import "/src/shared/style/truncate";
+@import "/src/shared/style/variables";
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: $border-radius;
+  background-color: $link-water15;
+  box-shadow: $shadow-standard;
+  transform: scale(1);
+  transition: all 0.15s ease-out;
+
+  @include mobile {
+    width: 100%;
+    padding: $spacing-sm;
+  }
+
+  @include desktop {
+    width: 200px;
+    margin: $spacing-lg;
+    padding: $spacing-md;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $link-water25;
+    box-shadow: $shadow-highlighted;
+    transition: all 0.15s ease-in;
+
+    @include mobile {
+      transform: scale(1.05);
+    }
+
+    @include desktop {
+      transform: scale(1.15);
+    }
+  }
+
+  .beerImage {
+    height: 200px;
+    margin-bottom: $spacing-md;
+  }
+
+  .beerName {
+    @include truncate();
+  }
+}

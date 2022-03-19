@@ -1,0 +1,20 @@
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+
+$border-radius: 20px;
+
+$mobileLimit: 1024px;
+$desktopLimit: $mobileLimit + 1;
+
+@mixin desktop {
+  @media only screen and (min-width: $desktopLimit) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobileLimit) {
+    @content;
+  }
+}

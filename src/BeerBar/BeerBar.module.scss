@@ -1,0 +1,43 @@
+@import "/src/shared/style/layout";
+@import "/src/shared/style/variables";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: $shadow-standard;
+    background-color: $link-water15;
+
+    @include mobile {
+      height: 40px;
+      font-size: 1rem;
+    }
+
+    @include desktop {
+      height: 60px;
+      font-size: $header-font-size;
+    }
+  }
+
+  .beers {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      padding-top: $spacing-sm;
+    }
+
+    @include desktop {
+      padding-top: $spacing-lg;
+    }
+  }
+}
