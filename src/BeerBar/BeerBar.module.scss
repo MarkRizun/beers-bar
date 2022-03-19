@@ -16,12 +16,11 @@
     background-color: $link-water15;
 
     @include mobile {
-      height: 40px;
-      font-size: 1rem;
+      padding: $spacing-sm 0;
     }
 
     @include desktop {
-      height: 60px;
+      padding: $spacing-md 0;
       font-size: $header-font-size;
     }
   }

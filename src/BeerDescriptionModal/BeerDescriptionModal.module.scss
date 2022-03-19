@@ -28,8 +28,8 @@ $header-height: 60px;
     }
 
     @include desktop {
-      width: 600px;
-      height: 400px;
+      width: 45rem;
+      height: 30rem;
       border-radius: $border-radius;
       box-shadow: $shadow-full;
       padding: $spacing-sm $spacing-lg $spacing-sm $spacing-lg;

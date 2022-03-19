@@ -12,7 +12,7 @@ const BeerInfoCard: FC<BeerInfoCardProps> = ({ beer, openBeerDescription }) => {
     <div className={beerInfoCardStyle.content} onClick={openBeerDescription}>
       <img
         src={beer.image_url}
-        alt={`La bière ${beer.name}`}
+        alt={`The beer ${beer.name}`}
         className={beerInfoCardStyle.beerImage}
       />
       <div className={beerInfoCardStyle.beerName} title={beer.name}>

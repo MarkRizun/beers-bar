@@ -27,7 +27,7 @@ const BeerDescriptionModal: FC<BeerDescriptionModalProps> = ({
             {beer.name}
           </div>
           <button
-            title="Fermer la description"
+            title="Close the beer description"
             className={beerDescriptionModalStyle.button}
             onClick={onClose}
           >
@@ -37,7 +37,7 @@ const BeerDescriptionModal: FC<BeerDescriptionModalProps> = ({
         <div className={beerDescriptionModalStyle.description}>
           <img
             src={beer.image_url}
-            alt={`La bière ${beer.name}`}
+            alt={`The beer ${beer.name}`}
             className={beerDescriptionModalStyle.beerImage}
           />
           <div className={beerDescriptionModalStyle.beerInfo}>
@@ -47,11 +47,7 @@ const BeerDescriptionModal: FC<BeerDescriptionModalProps> = ({
               </div>
               <div className={beerDescriptionModalStyle.beerTips}>
                 <button
-                  title={
-                    isTipsDisplayed
-                      ? "Masquer les conseils"
-                      : "Afficher les conseils"
-                  }
+                  title={isTipsDisplayed ? "Hide the tips" : "Show the tips"}
                   className={beerDescriptionModalStyle.button}
                   onClick={toggleTips}
                 >
@@ -65,7 +61,7 @@ const BeerDescriptionModal: FC<BeerDescriptionModalProps> = ({
                       : beerDescriptionModalStyle.tipsHidden
                   }
                 >
-                  Tips: {beer.brewers_tips}
+                  Our tips: {beer.brewers_tips}
                 </div>
               </div>
             </div>
